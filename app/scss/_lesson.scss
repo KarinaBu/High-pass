@@ -1,0 +1,113 @@
+.lesson {
+	padding-top: 43px;
+	padding-bottom: 66px;
+	background-color: $black;
+	color: $white;
+
+	&__name {
+		margin-bottom: 16px;
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__left {
+		display: flex;
+		margin-right: 31px;
+
+		&-img {
+			margin-right: 29px;
+		}
+
+		&-descr {
+			width: 409px;
+		}
+
+		&-info {
+			padding-top: 15px;
+		}
+
+		&-date {
+			margin-bottom: 9px;
+
+			&:first-child {
+				margin-right: 14px;
+			}
+
+			img {
+				margin-right: 6px;
+			}
+		}
+
+		&-title {
+			margin-bottom: 1px;
+		}
+
+		&-descr {
+			margin-bottom: 51px;
+			line-height: 28px;
+		}
+
+		&-btn {
+			padding: 13px 21px;
+			border: 3px solid transparent;
+			background-color: $orange;
+			transition-property: background-color, border;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+
+			&:hover {
+				background-color: $tuscany;
+				transition: background-color .3s ease;
+			}
+
+			&:focus {
+				background-color: $tuscany;
+				border: 3px solid $grenadier;
+				transition: border .3s ease;
+			}
+
+			&:active {
+				background-color: $grenadier;
+				transition: background-color .3s ease;
+			}
+		}
+	}
+
+	&__right {
+		&-item {
+			display: flex;
+			align-items: center;
+
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&-img {
+			margin-right: 17px;
+			width: 80px;
+			height: 60px;
+		}
+
+		&-date {
+			margin-bottom: 4px;
+
+			&:first-child {
+				margin-right: 18px;
+			}
+		}
+
+	}
+}
+
+.date {
+	display: inline-block;
+	font-size: 12px;
+
+	img {
+		vertical-align: middle;
+	}
+}

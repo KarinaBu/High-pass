@@ -1,0 +1,165 @@
+.contacts {
+	padding-top: 41px;
+	padding-bottom: 67px;
+
+	&__title {
+		margin-bottom: 25px;
+	}
+
+	&__blocks {
+		display: flex;
+	}
+
+	&__left {
+		position: relative;
+		margin-right: 30px;
+
+		&-map {
+			width: 850px;
+			height: 460px;
+		}
+
+		&-descr {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 410px;
+			height: 459px;
+			color: $white;
+			background: rgba(32, 32, 32, 0.85);
+		}
+
+		&-reset {
+			float: right;
+			margin-top: 19px;
+			margin-right: 20px;
+
+			& svg {
+				width: 20px;
+				height: 20px;
+				fill: $white;
+				transition: fill .3s ease;
+			}
+
+			&:hover svg {
+				fill: $orange;
+			}
+		}
+
+		&-content {
+			padding: 173px 0px 0 60px;
+			width: 369px;
+		}
+
+		&-name {
+			margin-bottom: 3px;
+		}
+
+		&-text {
+			line-height: 28px;
+			color: $silver;
+		}
+
+		&-phone {
+			font-family: 'TT Firs Neue';
+		}
+	}
+
+	&__right {
+		&-name {
+			margin-top: -10px;
+			margin-bottom: 5px;
+		}
+
+		&-text {
+			margin-bottom: 14px;
+			line-height: 22px;
+			color: $dusty-gray;
+		}
+
+		&-label {
+			position: relative;
+		}
+
+		&-input {
+			margin-bottom: 18px;
+			padding: 14px 220px 19px 22px;
+
+			&:focus {
+				outline: 1px solid $orange;
+			}
+
+			&:hover::placeholder {
+				color: $orange;
+				transition: color .3s ease;
+			}
+
+			&:active {
+				outline: none;
+				color: $black;
+			}
+		}
+
+		textarea {
+			margin-bottom: 20px;
+			padding-top: 19px;
+			width: 410px;
+			height: 150px;
+		}
+
+		&-input,
+		textarea {
+			padding-left: 22px;
+			color: $black;
+			background: $mercury;
+
+			&::placeholder {
+				color: $dusty-gray;
+			}
+		}
+
+		&-btn {
+			padding: 13px 21px;
+			border: 3px solid transparent;
+			background-color: $orange;
+			transition-property: background-color, border;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+
+			&:hover {
+				background-color: $tuscany;
+				transition: background-color .3s ease;
+			}
+
+			&:focus {
+				outline: none;
+				border: 3px solid $grenadier;
+				background-color: $tuscany;
+				transition: border .3s ease;
+			}
+
+			&:active {
+				background-color: $grenadier;
+				transition: background-color .3s ease;
+			}
+		}
+	}
+
+}
+
+
+[class*="ground-pane"] {
+	filter: grayscale(1);
+}
+
+.js-validate-error-label {
+	position: absolute;
+	top: 36px;
+	left: 19px;
+	line-height: 1;
+	color: $orange;
+}
+
+.descr-none {
+	display: none;
+}

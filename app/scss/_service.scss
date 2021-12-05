@@ -1,0 +1,340 @@
+.service {
+	padding-top: 42px;
+	padding-bottom: 10px;
+
+	&__title {
+		margin-bottom: 12px;
+	}
+
+	&__block {
+		display: grid;
+		grid-template-columns: 847px 410px;
+		grid-template-rows: 397px 400px;
+		column-gap: 33px;
+		row-gap: 30px;
+	}
+
+	&__banner {
+		margin-top: -91px;
+		margin-bottom: 28px;
+		padding: 20px 0px 30px 30px;
+		width: 100%;
+		grid-column-start: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		justify-self: end;
+		background-image: -webkit-image-set(url("../img/service/banner.webp") 1x);
+		background-image: image-set(url("../img/service/banner.png") 1x);
+		background-repeat: no-repeat;
+
+		&-name {
+			line-height: 37px;
+			font-family: 'TT Firs Neue';
+			font-weight: bold;
+			font-size: 36px;
+			color: $yellow;
+		}
+
+		&-date {
+			margin-bottom: 208px;
+			line-height: 22px;
+			font-weight: bold;
+			color: $yellow;
+		}
+
+		&-descr {
+			margin-bottom: 9px;
+			max-width: 218px;
+			line-height: 22px;
+			color: $white;
+		}
+
+		&-price {
+			margin-bottom: 11px;
+			padding: 9px 15px;
+			width: 114px;
+			border: 3px solid;
+			border-radius: 60%;
+			font-family: 'TT Firs Neue';
+			font-weight: bold;
+			font-size: 29px;
+			color: $yellow;
+		}
+
+		&-btn {
+			padding: 13px 21px;
+			border: 3px solid transparent;
+			background-color: $orange;
+			transition-property: background-color, border;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+
+			&:hover {
+				background-color: $tuscany;
+				transition: background-color .3s ease;
+			}
+
+			&:focus {
+				background-color: $tuscany;
+				border: 3px solid $grenadier;
+				transition: border .3s ease;
+			}
+
+			&:active {
+				background-color: $grenadier;
+				transition: background-color .3s ease;
+			}
+		}
+	}
+
+	&__example {
+
+		&-title {
+			margin-bottom: 17px;
+		}
+
+		&-gallery {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 30px;
+			row-gap: 30px;
+		}
+	}
+
+
+	&__nav-list {
+		display: flex;
+		margin-bottom: 34px;
+	}
+
+	&__nav-item-btn {
+		line-height: 28px;
+		font-weight: bold;
+		font-size: 16px;
+		color: $grey;
+		transition-property: background-color, box-shadow, color;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+
+		span {
+			display: inline-block;
+			box-shadow: 0px 0px 0px 3px transparent;
+			background-color: transparent;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+
+	&__nav-item-step:first-child {
+		border-bottom: 3px solid #CACACA;
+
+		&:active {
+			border-bottom: 3px solid #CACACA;
+		}
+
+		.service__nav-item-btn {
+			width: 260px;
+			text-align: start;
+			color: $dove-gray;
+
+			&:hover {
+				width: 260px;
+				color: $orange;
+			}
+
+			&:active {
+				width: 260px;
+				color: $dove-gray;
+			}
+		}
+	}
+
+	&__nav-item-step:last-child {
+		border-bottom: 3px solid $silver;
+
+		.service__nav-item-btn {
+			width: 260px;
+			text-align: end;
+			color: $dove-gray;
+
+			&:focus span {
+				background-color: $romantic;
+				box-shadow: 0px 0px 0px 3px $romantic;
+				transition-property: background-color, box-shadow;
+				transition-duration: .3s;
+				transition-timing-function: ease;
+			}
+		}
+
+		& span:hover {
+			color: $orange;
+		}
+	}
+
+	&__list-item {
+		display: flex;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+
+		&:hover .service__list-name {
+			color: $orange;
+		}
+
+		&:active .service__list-name {
+			color: $grenadier;
+		}
+	}
+
+	&__list-content {
+		margin-top: 19px;
+	}
+
+	&__list-img,
+	.change__item-img {
+		margin-right: 28px;
+	}
+
+	&__list-name {
+		margin-bottom: 4px;
+		line-height: 22px;
+		transition: color .3s ease;
+	}
+
+	&__list-descr {
+		margin-bottom: 12px;
+		max-width: 518px;
+		line-height: 22px;
+		font-size: 16px;
+		color: $dusty-gray;
+	}
+
+	&__list-link,
+	.change__link {
+		line-height: 28px;
+		box-shadow: 0px 0px 0px 6px transparent;
+		font-weight: bold;
+		color: $orange;
+		background-color: transparent;
+		transition-property: background-color, box-shadow;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0px 0px 0px 6px $romantic;
+			background-color: $romantic;
+			transition-property: background-color, box-shadow;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+		}
+
+		&:active {
+			box-shadow: 0px 0px 0px 6px transparent;
+			color: $grenadier;
+			background-color: transparent;
+			transition-property: background-color, box-shadow, color;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+		}
+
+		&:active svg {
+			box-shadow: 0px 0px 0px 6px transparent;
+			fill: $grenadier;
+			background-color: transparent;
+			transition-property: background-color, box-shadow, fill;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+		}
+
+		&-img,
+		.change__link-img {
+			width: 19px;
+			height: 14px;
+			fill: $orange;
+			vertical-align: middle;
+		}
+	}
+
+	.btn-selected {
+		width: 150px !important;
+		color: $orange !important;
+
+	}
+
+	.li-selected {
+		width: 150px !important;
+		border-bottom: 3px solid $orange !important;
+	}
+
+	.tab-content {
+		display: none;
+	}
+
+	.tab-content-active {
+		display: grid;
+	}
+
+	.service__block-change {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 33px;
+
+		.change {
+			&__list {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-start: 1;
+				grid-column-end: 3;
+				row-gap: 30px;
+				column-gap: 30px;
+			}
+
+			&__item {
+				display: flex;
+				position: relative;
+
+				&:hover .change__text {
+					color: $orange;
+				}
+
+				&:active .change__text {
+					color: $grenadier;
+				}
+			}
+
+			&__descr {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				flex-grow: 1;
+			}
+
+			&__text {
+				margin-bottom: 10px;
+				transition: color .3s ease;
+			}
+		}
+	}
+
+	.service__list-descr--tablet {
+		display: none;
+	}
+
+	.btn-block::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+	}
+}

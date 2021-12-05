@@ -1,0 +1,159 @@
+.header {
+	background-color: $black;
+}
+
+.header__top {
+	padding: 20px 0px;
+
+	.container {
+		justify-content: space-between;
+	}
+
+	&-logo {
+		margin-right: 49px;
+		object-fit: none;
+	}
+
+	&-list {
+		display: flex;
+		margin-top: 10px;
+	}
+
+	&-item {
+		&:not(:last-child) {
+			margin-right: 79px;
+		}
+
+		font-family: 'TT Firs Neue';
+		color: $white;
+
+		&:hover {
+			color: $orange;
+			transition: color .3s ease;
+		}
+
+		&:active {
+			color: $grenadier;
+			transition: color .3s ease;
+		}
+	}
+
+	&-link {
+		display: block;
+		outline: none;
+		box-shadow: 0px 0px 0px 6px transparent;
+		background-color: transparent;
+		transition-property: background-color, box-shadow;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+
+		&:focus {
+			box-shadow: 0px 0px 0px 6px #bc572b;
+			background-color: $tuscany;
+			transition-property: background-color, box-shadow;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+		}
+
+		&:active {
+			box-shadow: 0px 0px 0px 6px transparent;
+			background-color: transparent;
+		}
+	}
+}
+
+.header__bottom {
+	padding: 9px 0px;
+	background-color: $grey;
+
+	.container {
+		justify-content: space-between;
+	}
+
+	&-phone {
+		margin-top: 5px;
+	}
+
+	&-call-content {
+		font-family: 'TT Firs Neue';
+		font-weight: 700;
+		color: $white;
+	}
+
+	&-btn {
+		margin-top: 2px;
+		outline: none;
+
+		&:focus input {
+			border-bottom: 1px solid $tuscany;
+			transition: border-bottom .3s ease;
+		}
+
+		&:active input {
+			caret-color: $white;
+			border-bottom: 1px solid $grenadier;
+			transition: border-bottom .3s ease;
+		}
+	}
+
+	&-search {
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: $silver;
+			vertical-align: middle;
+		}
+
+		&-input {
+			border: none;
+			outline: none;
+			caret-color: $white;
+			border-bottom: 1px solid $mercury;
+			color: $white;
+			background-color: transparent;
+			transition: border-bottom .3s ease;
+
+			&:active::placeholder {
+				color: transparent;
+			}
+
+			&:hover {
+				border-bottom: 1px solid $orange;
+				transition: border-bottom .3s ease;
+			}
+
+			&::placeholder {
+				font-family: 'TT Firs Neue';
+				font-size: 14px;
+				color: $mercury;
+			}
+		}
+
+	}
+}
+
+
+.phone-tablet,
+.search-tablet,
+.tabl,
+.reset {
+	display: none;
+}
+
+.burger {
+	display: none;
+	position: relative;
+	outline: none;
+	width: 20px;
+	height: 18px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.burger svg rect {
+	transition: fill .3s ease;
+}
+
+.burger:hover svg rect {
+	fill: $orange;
+}

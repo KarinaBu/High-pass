@@ -1,0 +1,232 @@
+@font-face {
+	font-family: 'TT Firs Neue';
+	src: url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TT Firs Neue";
+	src: url("../fonts/TTFirsNeueBold.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/roboto-v27-latin_cyrillic-regular.woff2') format('woff2'),
+		url('../fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff'),
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/roboto-v29-latin_cyrillic-700.woff2') format('woff2'),
+		url('../fonts/roboto-v29-latin_cyrillic-700.woff') format('woff'),
+}
+
+$background: #E5E5E5;
+$white: #FFFFFF;
+$black: #202020;
+$grey: #4A4A4A;
+$orange: #FF6E30;
+$mine_shaft: #333333;
+$yellow: #FFF500;
+$mercury: #E9E9E9;
+$tuscany: #BC572B;
+$grenadier: #CE4307;
+$silver: #CACACA;
+$dusty-gray: #999999;
+$bluewood: #223444;
+$romantic: #FFD4C1;
+$dove-gray: #666666;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto';
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+:focus {
+	outline: 3px solid $orange;
+}
+
+:active {
+	outline: none;
+}
+
+.container {
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container--flex {
+	display: flex;
+}
+
+.btn {
+	border: none;
+	align-items: center;
+	cursor: pointer;
+	color: $white;
+	background-color: transparent;
+}
+
+.title {
+	font-family: 'TT Firs Neue';
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.mark {
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #4A4A4A;
+}
+
+.name {
+	font-family: 'TT Firs Neue';
+	font-weight: 400;
+	font-size: 24px;
+}
+
+body {
+	background-color: $white;
+}
+
+.call {
+	outline: none;
+
+	svg {
+		fill: $silver;
+		width: 22px;
+		height: 22px;
+		margin-right: -7px;
+		vertical-align: middle;
+		transition: fill .3s ease;
+
+		path {
+			transition: fill .3s ease;
+		}
+	}
+
+	span {
+		transition: color .3s ease;
+	}
+
+	&:focus {
+		box-shadow: 0px 0px 0px 5px #bc572b;
+		background-color: $tuscany;
+		transition-property: background-color, box-shadow;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+	}
+
+	&:hover span {
+		color: $orange;
+		transition: color .3s ease;
+	}
+
+	&:hover svg {
+		fill: $orange;
+		transition: fill .3s ease;
+	}
+
+	&:active {
+		box-shadow: 0px 0px 0px 5px transparent;
+		background-color: transparent;
+	}
+
+	&:active span {
+		color: $grenadier;
+		transition: color .3s ease;
+	}
+
+	&:active svg {
+		fill: $grenadier;
+		transition: fill .3s ease;
+	}
+}
+
+.social {
+	display: flex;
+	margin-top: 5px;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		display: block;
+		cursor: pointer;
+		transition: fill .3s ease;
+
+		svg {
+			display: block;
+			width: 30px;
+			height: 30px;
+			fill: $silver;
+			transition: fill .3s ease;
+		}
+
+		&:focus svg {
+			outline: none;
+			fill: $tuscany;
+			transition: fill .3s ease;
+		}
+
+		&:hover svg {
+			fill: $orange;
+			transition: fill .3s ease;
+		}
+
+		&:active svg {
+			fill: $grenadier;
+			transition: fill .3s ease;
+		}
+	}
+
+}

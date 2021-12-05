@@ -1,0 +1,45 @@
+.footer {
+	padding-top: 25px;
+	padding-bottom: 30px;
+	color: $mercury;
+	background-color: $black;
+
+	&__container {
+		justify-content: space-between;
+	}
+
+	&__left {
+
+		&-logo {
+			margin-bottom: 3px;
+		}
+
+		&-descr {
+			line-height: 18px;
+			font-family: 'TT Firs Neue';
+			font-size: 14px;
+		}
+	}
+
+	&__center {
+		max-width: 376px;
+		line-height: 22px;
+
+		&-copyright {
+			font-size: 16px;
+			color: $silver;
+		}
+	}
+
+	&__right {
+
+		&-list {
+			display: flex;
+			padding-left: 16px;
+		}
+
+		&-descr {
+			margin-bottom: 11px;
+		}
+	}
+}

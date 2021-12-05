@@ -1,0 +1,90 @@
+.hero {
+	padding-top: 40px;
+	padding-bottom: 43px;
+}
+
+.hero__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 25px;
+}
+
+.hero__left {
+	position: relative;
+	background-image: -webkit-image-set(url("../img/hero/bg.webp") 1x);
+	background-image: image-set(url("../img/hero/bg.png") 1x);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&-mark {
+		position: absolute;
+		top: 16px;
+		right: 17px;
+		padding: 7px 15px;
+		font-size: 14px;
+		color: $white;
+		background-color: $grey;
+	}
+
+	&-content {
+		padding-top: 406px;
+		padding-left: 58px;
+		color: $white;
+	}
+
+	&-title {
+		margin-bottom: 14px;
+		max-width: 427px;
+		font-family: 'TT Firs Neue';
+		font-size: 36px;
+	}
+
+	&-btn {
+		padding: 13px 21px;
+		border: 3px solid transparent;
+		background-color: $orange;
+		transition-property: background-color, border;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+
+		&:hover {
+			background-color: $tuscany;
+			transition: background-color .3s ease;
+		}
+
+		&:focus {
+			background-color: $tuscany;
+			border: 3px solid $grenadier;
+			transition: border .3s ease;
+		}
+
+		&:active {
+			background-color: $grenadier;
+			transition: background-color .3s ease;
+		}
+	}
+}
+
+.hero__right {
+	margin-top: -7px;
+
+	&-name {
+		margin-bottom: 26px;
+	}
+
+	&-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 25px;
+		column-gap: 34px;
+	}
+
+	&-item img {
+		display: block;
+	}
+
+	.number1 {
+		grid-column-start: span 2;
+	}
+}

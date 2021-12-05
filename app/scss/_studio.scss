@@ -1,0 +1,104 @@
+.studio {
+	padding-bottom: 69px;
+	background-color: $black;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 29px;
+	}
+
+	&__descr {
+		padding-top: 33px;
+	}
+
+	&__title {
+		margin-bottom: 5px;
+		color: $white;
+	}
+
+	&__text {
+		width: 32.812vw;
+		line-height: 28px;
+		font-size: 16px;
+		color: $silver;
+	}
+
+	&__subscr {
+		padding-top: 62px;
+
+		&-img {
+			margin-bottom: 21px;
+		}
+
+		&-name {
+			margin-bottom: 16px;
+			line-height: 22px;
+			font-family: 'TT Firs Neue';
+			font-size: 24px;
+			color: white;
+		}
+
+		&-form {
+			position: relative;
+			display: flex;
+		}
+
+		&-btn {
+			padding: 13px 21px;
+			border: 3px solid transparent;
+			background-color: $orange;
+			transition-property: background-color, border;
+			transition-duration: .3s;
+			transition-timing-function: ease;
+
+			&:hover {
+				background-color: $tuscany;
+				transition: background-color .3s ease;
+			}
+
+			&:focus {
+				outline: none;
+				border: 3px solid $grenadier;
+				background-color: $tuscany;
+				transition: border .3s ease;
+			}
+
+			&:active {
+				background-color: $grenadier;
+				transition: background-color .3s ease;
+			}
+		}
+
+		&-input {
+			margin-right: 28px;
+			padding: 16px 283px 18px 25px;
+			color: $silver;
+			background-color: $grey;
+			transition: color .3s ease;
+
+			&:focus {
+				outline: 1px solid $orange;
+				color: $silver;
+			}
+
+			&:hover::placeholder {
+				color: $orange;
+				transition: color .3s ease;
+			}
+
+			&:active {
+				outline: none;
+				color: $white;
+			}
+		}
+	}
+}
+
+.js-validate-error-label {
+	position: absolute;
+	top: 3px;
+	left: 19px;
+	line-height: 1;
+	color: $orange;
+}
